@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html body{
+	font-family: 'Microsoft Yahei' !important;
+}
+ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+hr.normal {
+	background:#ddd;
+	color: #ddd;
+	width: 70%;
+	height: 1px;
+	line-height: 1px;
+	border: none 0;
+	margin: 0.2rem auto;
+}
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+	content:"";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+	overflow: hidden;
+}
+.clearfix {
+	zoom: 1;
+}
+.header {
+	width: 100%;
+	/*height: 2.92rem;*/
+	height: 2.5rem
+}
+.header-icon {
+	float: left;
+	margin-left: 0.4rem;
+}
+.header-logo {
+	margin: 0 auto;
+	/*margin-top: 0.8rem;*/
+	margin-top: 0.5rem;
+	text-align: center;
+}
+.navbar {
+	height: 1.53rem;
+	/*margin-top: 0.5rem;*/
+	margin-top: 0.3rem;
+}
+.navbar > ul {
+	margin: 0 1.7rem;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+.nav > li > a {
+	width: 0.7rem;
+	height: 0.7rem;
+	display: block;
+	background-size: contain;
+}
+.nav > li > a:hover {
+	background-color: #dcdcdc;
+}
+.series-link {
+	background-image: url('./images/nav-1.png');
+}
+.series-link-part {
+	height: 0;
+	position: absolute;
+	z-index: 1;
+	transition: height 0.4s ease-in-out;
+}
+.series-link-part-wrapper {
+	margin: 0 auto;
+}
+.series-link-part-wrapper > li {
+	float: left;
+	margin-left: 0.5rem;
+}
+.series-link-part-wrapper > li > a > img {
+	width: 0.6rem;
+	/*height: 0.5rem;*/
+}
+.subject-handpick-link {
+	background-image: url('./images/nav-2.png');
+}
+.feature-mirror-link {
+	background-image: url('./images/nav-3.png');
+}
+.optometry-link {
+	background-image: url('./images/nav-4.png');
+}
+.footer {
+	/*margin-top: 1.8rem;*/
+	margin-top: 1.5rem;
+	padding-left: 0.4rem;
+	/*width: 100%;*/
+	height: 2.35rem;
+	background-color: #41b263;
+}
+.footer-msg > p {
+	color: #fff;
+	font-size: 8px;
+}
+.footer-img {
+	float: right;
+	margin: 0.15rem 1.3rem 0.15rem 0;
+}
+.footer-img > img {
+	width: 2rem;
+}
+.feature-mirror-content {
+	text-align: center;
+	margin: 0.5rem auto;
+}
+.feature-mirror-content > p {
+	font-size: 14px;
+}

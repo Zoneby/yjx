@@ -1,0 +1,115 @@
+.index-bg {
+	width: 100%;
+	height: 5.15rem;
+}
+.handpick-part {
+	margin-top: 0.68rem;
+}
+.handpick-part-title, .feature-mirror-title{
+	margin: 0 auto; 
+	text-align: center;
+	font-size: 18px;
+}
+.handpick-part-first-row {
+	margin-top: 0.3rem;
+	background-color: #f9f9f9;
+}
+.glasses-illustrate {
+	width:40%;
+	/*height: 100%;*/
+	height: 5.5rem;
+	float: right;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.glasses-style {
+	font-size: 16px;
+}
+.glasses-feature {
+	color: #b2b2b2;
+	font-size: 10px;
+	padding: 0.2rem 0;
+}
+.glasses-price {
+	font-size: 14px;
+	color: #db0808;
+}
+.handpick-part-second-row {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 0.4rem;
+	text-align: center;
+}
+.division {
+	/*margin-top: 1.2rem;*/
+	margin-top: 0.8rem;
+	height: 0.25rem;
+	width: 100%;
+	background-color: #f9f9f9;
+}
+.subject-handpick {
+	text-align: center;
+}
+.subject-handpick-title {
+	display: block;
+	margin: 0 auto;
+	font-size: 18px;
+}
+.arrows {
+	display: inline-block;	
+}
+.arrows-first {
+	padding-left: 0.1rem;
+}
+.arrows-first > .line-top, .arrows-first >.line-bottom {
+	width: 2px;
+	height: 0.2rem;
+	background-color: #dfdfdf;
+}
+.line-top, .line-bottom {
+	width: 1px;
+	height: 0.15rem;
+	background-color: #565656;
+}
+.line-top {
+	transform: skewX(30deg);
+}
+.line-bottom {
+	transform: skewX(-30deg);
+}
+.subject-handpick-bg {
+	/*margin-top: 0.74rem;*/
+	margin-top: 0.5rem;
+	width: 100%;
+	height: 5.5rem;
+}
+.series-title {
+	margin: 0.87rem 0 0.58rem 0.2rem;
+	font-size: 16px;
+}
+.series-title > p {
+	display: inline;
+}
+.series-title > .chinese-name {
+	font-size: 16px;
+	font-weight: 500;
+}
+.series-title > .english-name {
+	font-size: 14px;
+	color: #888888;
+	font-weight: 300;
+}
+.series-content {
+	text-align: center;
+}
+.series-footer {
+	/*margin-top: 0.5rem;*/
+	margin-top: 0.3rem;
+	margin-bottom: 0.3rem;
+	text-align:center;
+}
+.series-footer > a {
+	color: #565656;
+	font-size: 14px;
+}

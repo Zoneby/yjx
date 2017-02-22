@@ -1,0 +1,23 @@
+<script type="text/javascript">
+	$.ajax({
+	url: "{:U('/.../.../', array('id'=>$glass['glassid']))}",
+	data: {'degree':degree},
+	type: 'POST',
+	datatype: 'JSON',
+	success: function(msg){
+		var msg = JSON.parse(msg);//解析服务器传回的json字符串，将字符串解析为一个js值
+		console.info(msg);
+		if(msg['code'] == 200){
+			var url = "{:U('././')}";
+			window.location.href = url + '/order_id/' + msg['order_id'];
+		}
+		else if(msg['code'] == 400){
+			alert(msg['errormsg']);
+		},
+		error: function(msg){
+			console.info(msg);
+		}
+	}
+})
+</script>
+	

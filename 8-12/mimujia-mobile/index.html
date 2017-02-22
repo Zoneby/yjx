@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes"/>
+<meta content="yes" name="apple-mobile-web-app-capable">
+<script src="./js/flexible.js"></script>
+<script src="./js/flexible_css.js"></script>
+<script src="./js/jquery-1.11.1.js"></script>
+<link rel="stylesheet" href="./css/iSlider.css">
+<!-- 页面css -->
+<link rel="stylesheet" type="text/css" href="./public.css">
+<link rel="stylesheet" type="text/css" href="./index.css">
+<!-- <link rel="stylesheet" type="text/css" href="./pic.css"> -->
+<head>
+	<title>米目家手机商城</title>
+</head>
+
+<body>
+	<div class="container">
+		<!-- 头部logo和导航 -->
+		<div class="header">
+			<div class="header-logo">
+				<a href="./index.html">
+				<img src="./images/logo.png" alt="mimujia-logo">
+				</a>
+			</div>
+			<div class="header-logo-line"></div>
+			<div class="navbar">
+				<ul class="nav">
+					<li><a href="#" class="series-link">系列</a>
+					<div class="series-link-part" id="diff-series-icon" style="display: none;">
+						<!-- <div class="division-line"></div> -->
+						<ul class="series-link-part-wrapper clearfix">
+							<li><a href="http://o2o.imglasses.cn/MallProduct/storage/shop/1459407423550/strade/DeepForest"><img src="./images/forest.png" alt="深林系列"><p class="series-link-p">深林</p></a></li>
+							<li><a href="http://o2o.imglasses.cn/MallProduct/storage/shop/1459407423550/strade/Metropolitan"><img src="./images/city.png" alt="都会系列"></a><p class="series-link-p">都会</p></li>
+							<li><a href="http://o2o.imglasses.cn/MallProduct/storage/shop/1459407423550/strade/Legend"><img src="./images/legend.png" alt="传奇系列"></a><p class="series-link-p">传奇</p></li>
+							<li><a href="#"><img src="./images/milkyway.png" alt="银河系列"></a><p class="series-link-p">银河</p></li>
+							<li><a href="http://o2o.imglasses.cn/MallProduct/storage/shop/1459407423550/strade/Symphony"><img src="./images/symphony.png" alt="交响乐系列"></a><p class="series-link-p">交响乐</p></li>
+						</ul>
+					</div>
+					</li>
+					<li><a href="./topic.html" class="subject-handpick-link">专题</a></li>
+					<li><a href="./feature-mirror.html" class="feature-mirror-link">功能镜</a></li>
+					<li><a href="#" class="optometry-link">验光</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- 背景图 -->
+		<div class="index-bg clearfix" id="iSilder-wrapper-indexbg">
+
+		</div>
+		<!-- 内容栏 -->
+		<div class="all-content">
+			<!-- 精选栏 -->
+				<div class="handpick-part">
+					<p class="handpick-part-title">精选</p>
+						<div class="handpick-border">
+							<ul class="handpick-part-first-row">
+							<li>
+								<img class="handpick-part-first-row-img" src="./images/glasses.jpg">
+								<div class="glasses-illustrate">
+									<div>
+									<p class="glasses-style">豹纹琥珀</p>
+									<!-- <p class="glasses-feature">圆滑的框型加上流畅的线条</p> -->
+									<p class="glasses-price"><span>￥</span>199</p>
+									</div>
+								</div> 
+							</li>
+							</ul>
+							<ul class="handpick-part-second-row" style="margin-top: 0.3rem">
+								<li class=" second-row-content">
+									<img class="series-img" src="./images/glasses.jpg">
+									<hr class="normal">
+									<p class="glasses-style">豹纹琥珀</p>
+									<p class="glasses-price"><span>￥</span>199</p>
+								</li>
+								<li class=" second-row-content">
+									<img class="series-img" src="./images/glasses.jpg">
+									<hr class="normal">
+									<p class="glasses-style">豹纹琥珀</p>
+									<p class="glasses-price"><span>￥</span>199</p>
+								</li>
+							</ul>
+						</div>
+				</div>
+				<!-- 分割条 -->
+				<div class="division"></div>
+			</div>
+
+			<!-- 专题精选栏 -->
+			<div class="subject-handpick">
+				<a href="#" class="subject-handpick-title" name="subject-handpick">专题精选&nbsp;>
+					<!-- <div class="arrows-first arrows">
+					<p class="line-top"></p>
+					<p class="line-bottom"></p>
+					</div> -->
+				</a>
+				<div class="subject-handpick-bg" id="iSlider-wrapper-topicbg">
+				</div>
+			</div>
+			<!-- 分割条 -->
+			<div class="division"></div>
+			<!-- 功能镜 -->
+			<p class="feature-mirror-title" style="margin-top: 0.5rem">功能镜</p>
+			<ul class="feature-mirror">
+				<li class="feature-mirror-single-content">
+					<img class="single-content-img" src="./images/power.png" alt="">
+					<p class="single-content-p" >Bluelight Protect 游戏专用防蓝光</p>
+				</li>
+				<li class="feature-mirror-single-content">
+					<img class="single-content-img" src="./images/power.png" alt="">
+					<p class="single-content-p">Bluelight Protect 游戏专用防蓝光</p>
+				</li>
+			</ul>
+			<!-- 分割条 -->
+			<!-- <div class="division" style="margin-top: 0.5rem;"></div> -->
+			<!-- 各种系列部分 -->
+			<!-- 深林系列 -->
+			<div class="all-content">
+				<div class="series deep-forest">
+					<div class="series-title">
+						<p class="chinese-name"><a name="series">深林系列</a></p>
+						<p class="english-name">Deep Forest</p>
+						<p class="more-link"><a href="">更多>></a></p>
+					</div>
+					<ul class="series-content clearfix">
+						<li class="series-single-content">
+							<img class="series-img" src="./images/glasses.jpg">
+							<hr class="normal">
+							<p class="glasses-style">豹纹琥珀</p>
+							<!-- <p class="glasses-feature">圆滑的框型加上流畅的线条</p> -->
+							<p class="glasses-price"><span>￥</span>199</p>
+						</li>
+						<li class="series-single-content">
+							<img class="series-img" src="./images/glasses.jpg">
+							<hr class="normal">
+							<p class="glasses-style">豹纹琥珀</p>
+							<!-- <p class="glasses-feature">圆滑的框型加上流畅的线条</p> -->
+							<p class="glasses-price"><span>￥</span>199</p>
+						</li>
+					</ul>
+					<!-- <div class="series-footer">
+						<a href="#">更多深林系列 &nbsp;>>
+							<div class="arrows">
+								<p class="line-top"></p>
+								<p class="line-bottom"></p>
+							</div>
+							<div class="arrows">
+								<p class="line-top"></p>
+								<p class="line-bottom"></p>
+							</div>
+							<img src="./images/more-icon.png" alt="" style="width:0.35rem">
+						</a>
+					</div> -->
+				</div>
+				<!--  分割条-->
+				<div class="division"></div>
+				<!-- 都会系列 -->
+				<div class="series metropolitan">
+					<div class="series-title">
+						<p class="chinese-name">都会系列</p>
+						<p class="english-name">Metropolitan</p>
+						<p class="more-link"><a href="">更多>></a></p>
+					</div>
+					<ul class="series-content clearfix">
+						<li class="series-single-content">
+							<img class="series-img" src="./images/glasses.jpg">
+							<hr class="normal">
+							<p class="glasses-style">豹纹琥珀</p>
+							<!-- <p class="glasses-feature">圆滑的框型加上流畅的线条</p> -->
+							<p class="glasses-price"><span>￥</span>199</p>
+						</li>
+						<li class="series-single-content">
+							<img class="series-img" src="./images/glasses.jpg">
+							<hr class="normal">
+							<p class="glasses-style">豹纹琥珀</p>
+							<!-- <p class="glasses-feature">圆滑的框型加上流畅的线条</p> -->
+							<p class="glasses-price"><span>￥</span>199</p>
+						</li>
+					</ul>
+					<!-- <div class="series-footer">
+						<a href="#">更多都会系列&nbsp;>></a>
+					</div> -->
+				</div>
+				<!--  分割条-->
+				<div class="division"></div>
+				<!--传奇系列 -->
+				<div class="series metropolitan">
+					<div class="series-title">
+						<p class="chinese-name">传奇系列</p>
+						<p class="english-name">Legend</p>
+						<p class="more-link"><a href="">更多>></a></p>
+					</div>
+					<ul class="series-content clearfix">
+						<li class="series-single-content">
+							<img class="series-img" src="./images/glasses.jpg">
+							<hr class="normal">
+							<p class="glasses-style">豹纹琥珀</p>
+							<!-- <p class="glasses-feature">圆滑的框型加上流畅的线条</p> -->
+							<p class="glasses-price"><span>￥</span>199</p>
+						</li>
+						<li class="series-single-content">
+							<img class="series-img" src="./images/glasses.jpg">
+							<hr class="normal">
+							<p class="glasses-style">豹纹琥珀</p>
+							<!-- <p class="glasses-feature">圆滑的框型加上流畅的线条</p> -->
+							<p class="glasses-price"><span>￥</span>199</p>
+						</li>
+					</ul>
+					<!-- <div class="series-footer">
+						<a href="#">更多传奇系列&nbsp;>></a>
+					</div> -->
+				</div>
+
+				<!--  分割条-->
+				<div class="division"></div>
+				<!-- 银河系列 -->
+				<div class="series milkyway">
+					<div class="series-title">
+						<p class="chinese-name">银河系列</p>
+						<p class="english-name">Milkyway</p>
+						<p class="more-link"><a href="">更多>></a></p>
+					</div>
+					<ul class="series-content clearfix">
+						<li class="series-single-content">
+							<img class="series-img" src="./images/glasses.jpg">
+							<hr class="normal">
+							<p class="glasses-style">豹纹琥珀</p>
+							<!-- <p class="glasses-feature">圆滑的框型加上流畅的线条</p> -->
+							<p class="glasses-price"><span>￥</span>199</p>
+						</li>
+						<li class="series-single-content">
+							<img class="series-img" src="./images/glasses.jpg">
+							<hr class="normal">
+							<p class="glasses-style">豹纹琥珀</p>
+							<!-- <p class="glasses-feature">圆滑的框型加上流畅的线条</p> -->
+							<p class="glasses-price"><span>￥</span>199</p>
+						</li>
+					</ul>
+					<!-- <div class="series-footer">
+						<a href="#">更多银河系列&nbsp;>></a>
+					</div> -->
+				</div>
+
+				<!--  分割条-->
+				<div class="division"></div>
+				<!--交响乐系列 -->
+				<div class="series metropolitan">
+					<div class="series-title">
+						<p class="chinese-name">交响乐系列</p>
+						<p class="english-name">Symphony</p>
+						<p class="more-link"><a href="">更多>></a></p>
+					</div>
+					<ul class="series-content clearfix">
+						<li class="series-single-content">
+							<img class="series-img" src="./images/glasses.jpg">
+							<hr class="normal">
+							<p class="glasses-style">豹纹琥珀</p>
+							<!-- <p class="glasses-feature">圆滑的框型加上流畅的线条</p> -->
+							<p class="glasses-price"><span>￥</span>199</p>
+						</li>
+						<li class="series-single-content">
+							<img class="series-img" src="./images/glasses.jpg">
+							<hr class="normal">
+							<p class="glasses-style">豹纹琥珀</p>
+							<!-- <p class="glasses-feature">圆滑的框型加上流畅的线条</p> -->
+							<p class="glasses-price"><span>￥</span>199</p>
+						</li>
+					</ul>
+					<!-- <div class="series-footer">
+						<a href="#">更多交响乐系列&nbsp;>></a>
+					</div> -->
+				</div>
+			</div>
+		<!-- 脚部 -->
+		<div class="footer">
+			<div class="footer-msg" style="float: left; margin-top: 0.5rem;">
+				<img src="./images/MIMU.png" alt="mimujia_logo" style="width: 3rem;">
+				<p>长按识别图中二维码&nbsp;》</p>
+				<p>关注米目家商城公众号：mimujia</p>
+			</div>
+			<div class="footer-img">
+				<img src="./images/mimujia_qrcode.jpg" alt="米目家二维码">
+			</div>
+		</div>
+	</div>
+	<script src="./js/iSlider.js"></script>
+	<script src="./js/iSlider.animate.js"></script>
+	<script src="./js/iSlider.plugin.dot.js"></script>
+	<script src="./js/zepto.min.js"></script>
+	<script src="./index.js"></script>
+	<script>
+	$(document).ready(function () {
+		var indexBgList = [
+		// picture
+		{content: './images/banner.png'},
+		{content: './images/banner.png'},
+		{content: './images/banner.png'}
+		];
+		var indexBg = new iSlider(document.getElementById('iSilder-wrapper-indexbg'), indexBgList, {
+		isAutoplay: 1,
+		isLooping: 1,
+		isOverspread: 1,
+		// isVertical: true,
+		isTouchable: true,
+		animateTime: 800
+		});
+		var topicBgList = [
+	 	{content: './images/topic-1.jpg'},
+	 	{content: './images/topic-2.jpg'},
+	 	{content: './images/topic-3.jpg'}
+	 	]; 
+	 	var topicBg = new iSlider(document.getElementById('iSlider-wrapper-topicbg'), topicBgList, {
+	 	isLooping: 1,
+	 	isOverspread: 1,
+	 	isAutoplay: 1,
+	 	animateTime: 800,
+	 	// isVertical: true,
+	 	animateType: 'depth'
+	 });
+	});		
+	</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding:0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: 'Microsoft Yahei';
+}
+html {
+	font-size: 20;
+}
+hr{
+	color: #f9f9f9;
+	background-color: #f9f9f9;
+	height: 1px;
+	border: none;
+}
+.header {
+	width: 100%;
+	height: 1.39rem;
+}
+.head_logo {
+	width: 100%;
+	height: 2.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.bg {
+	width: 100%;
+	height: 8.125rem;
+	position: absolute;
+	top: 2.2rem;
+}
+.body {
+	width: 100%;
+}
+.handpick {
+	width: 100%;
+	position: absolute;
+	top: 11.325rem;
+
+}
+.handpick_title {
+	text-align: center;
+}
+.handpick_firstline {
+	width: 90%;
+	height: 8.55rem;
+	position: absolute;
+	top: 13rem;
+	left: 5%;
+	background-color: #f9f9f9;
+}
+.handpick_firstline>img {
+	width: 8.85rem;
+}
+.describe {
+	top: 2rem;
+	position: absolute;
+	right: 0;
+	line-height: 1.4rem;
+}
+.glasses_style {
+	font-size: 0.65rem;
+}
+.glasses_feature {
+	font-size: 0.4rem;
+	color: #b2b2b2;
+}
+.price{
+	color: #db0808;
+	font-weight: bold;
+	font-size: 0.5rem;
+}
+.handpick_secondline {
+	width: 90%;
+	height: 7.2rem;
+	position: absolute;
+	top: 21.55rem;
+	left: 5%;
+	text-align: center;
+	line-height: 1.2rem;
+}
+.hand_second_left>img, .hand_second_right>img {
+	width: 7.5rem;
+	height: 7.5rem;
+}

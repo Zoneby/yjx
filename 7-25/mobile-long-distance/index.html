@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="yes" name="apple-moblie-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telphone=no,email=no" name="format-detection">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+	<title>手机远程验光</title>
+	<script type="text/javascript" src="./lib/flexible.js"></script>
+	<script src="./lib/js/jquery-1.11.1.js"></script>
+	<!-- <script src="./lib/js/jquery.mobile-1.4.5.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<style type="text/css">
+  
+</style>
+<body>
+	<header>
+		<nav id="header-icon">
+			<a  class="e-click-link" id="first-logo"></a>
+			<a  class="rg-link" id="second-logo"></a>
+			<a  class="agtm-link" id="third-logo"></a>
+			<a  class="input-link" id="fourth-logo"></a>
+		</nav>
+	</header>
+  <!-- for E-test -->
+	<div class="page" id="first-page" style="display: block;">
+		<div class="panel-body" id="E" style="display: block;">
+            <div class="Etop">
+              <h1 class="text-center" id="distance" style="font-size: 48px;">5</h1>
+              <p class="text-center now-distance">当前距离（米）</p>
+            </div>
+            <div class="Edown text-center">
+              <div class="add">
+                <button id="addE" class="btn btn-default">+</button>
+              </div>
+              <div class="middle">
+                <span id="deg1">0.1</span>
+                <img id="picture" src="./img/0.png" class="img-circle"/>
+                <span id="deg2">4.0</span>
+              </div>
+              <div class="sub">
+                <button id="subE" class="btn btn-default">-</button>
+              </div>
+            </div>
+          </div>
+	</div>
+  <!-- for RG -->
+	<div class="page" id="second-page" style="display: none;">
+		<div class="panel-body" id='RG'>
+            <img src="./img/image_color_test.png" alt="RG" class="img-responsive" />
+         </div>
+	</div>
+
+	<!-- for SG散光 -->
+	<div class="page" id="third-page" style="display: none;">
+		<div id='SG' style="display: block;">
+            <div class="panel-body" id="sg_right">
+            	<div class="SGtop">
+                	<div class="SG_right SGtop_left" style="width: 50%;"></div>
+                	<div class="SGtop_right">
+                  	<h1 id="right_curr_zhouwei" class="text-center">0</h1>
+                  	<p class="text-center">当前轴位</p>
+                </div>
+            </div>
+              	<div class="SGmiddle">
+                	<div>
+                  		<button id="right_zhouwei_sub5" class="btn btn-default btn-lg SGsub">-</button> <b>5</b>
+                  		<button id="right_zhouwei_add5" class="btn btn-default btn-lg SGadd">+</button>
+                	</div>
+                	<div>
+                  	<button id="right_zhouwei_sub1" class="btn btn-default btn-lg SGsub">-</button> <b>1</b>
+                  	<button id="right_zhouwei_add1" class="btn btn-default btn-lg SGadd">+</button>
+                	</div>
+              	</div>
+              	<div class="SGdown">
+                	<div id="right_row_col_div" class="row_col_div center-block btn btn-default btn-lg">
+                  	<p class="text-center">右横竖线</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body" id="sg_left" style="display:none;">
+            <div class="SGtop">
+                <div class="SG_left SGtop_left col-md-6"></div>
+                <div class="SGtop_right col-md-6">
+                  <h1 id="left_curr_zhouwei" class="text-center">0</h1>
+                  <p class="text-center">当前轴位</p>
+                </div>
+            </div>
+              <div class="SGmiddle">
+                <div>
+                  <button id="left_zhouwei_sub5" class="btn btn-default btn-lg SGsub">-</button>
+                  <b>5</b>
+                  <button id="left_zhouwei_add5" class="btn btn-default btn-lg SGadd">+</button>
+                </div>
+                <div>
+                  <button id="left_zhouwei_sub1" class="btn btn-default btn-lg SGsub">-</button>
+                  <b>1</b>
+                  <button id="left_zhouwei_add1" class="btn btn-default btn-lg SGadd">+</button>
+                </div>
+              </div>
+              <div class="SGdown">
+                <div id="left_row_col_div" class="row_col_div center-block btn btn-default btn-lg">
+                  <p class="text-center">横竖线</p>
+                </div>
+              </div>
+            </div>
+        </div>
+	</div>
+  <!--  for input-agtm-msg -->
+	<div class="page" id="fourth-page" style="display: none;">
+		<div class="container" id="containerId">	
+			<notempty name="error">
+			<p  class="new_1" style="color:red">{$error}</p>
+			</notempty>
+			<form method="post" action="{:U('MallOrder/prescription_input', array('shop'=>$shop['shopid'], 'id'=>$glass['glassid']))}" onsubmit="return check();">
+	            <div class="phone_p">
+	                <p class="new_1">验光单所属：{$prescription_phone}</p>
+	            </div>
+	            <!-- 度数 -->
+	            <p class="list_p">度数（SPH）</p>
+	            <select class="select_left" id="selectId_1" name="left_myopia_degree">
+	            </select>
+	            <select class="select_right" id="selectId_2" name="right_myopia_degree">
+	            </select> 
+	            
+	            <!-- 瞳距 -->
+	            <p class="list_p">瞳距（PD）</p>
+	            <select class="select_bottom" id="selectId_3" name="pupillary_distance">
+	            </select>
+
+	            <!-- 散光 -->
+	            <p class="list_p">散光（CYL）</p>
+	            <select class="select_left" id="selectId_4" name="left_astigmia_degree">
+	            </select> 
+	            <select class="select_right" id="selectId_5" name="right_astigmia_degree">
+	            </select>
+
+	            <!-- 散光方向 -->
+	            <p class="list_p" id="selectIdhide">轴位（AIXS）</p>
+	            <select class="select_left selecting" id="selectId_6" name="left_astigmia_direction">
+	            </select> 
+	            <select class="select_right selecting" id="selectId_7" name="right_astigmia_direction">
+	            </select>
+	            <div class="buy_div">
+	                <div class="col-2">
+	                    <button type="submit" class="btn btn-warning">保存</button>
+	                </div>
+	            </div>
+	        </form>
+		</div>
+	</div>
+
+<script type="text/javascript" src="./index-js/four-page.js"></script>
+<script src="./lib/js/jquery.mobile-1.4.5.js"></script>
+<script type="text/javascript">
+	$(function(){
+    //点击导航栏图标，切换显示页面
+		$('#first-logo').on("tap",function(){
+        $('#second-logo').removeClass("rg-click-link").addClass("rg-link");
+        $('#third-logo').removeClass("agtm-click-link").addClass("agtm-link");
+        $('#fourth-logo').removeClass("input-click-link").addClass("input-link");
+
+        $(this).removeClass("e-link").addClass("e-click-link");
+        $('.page').css({'display':'none'});
+        $('#first-page').css({'display':'block'});    
+    });
+
+    $('#second-logo').on("tap",function(){
+        $('#first-logo').removeClass("e-click-link").addClass('e-link');
+        $('#third-logo').removeClass("agtm-click-link").addClass("agtm-link");
+        $('#fourth-logo').removeClass("input-click-link").addClass("input-link");
+
+        $(this).removeClass("rg-link").addClass("rg-click-link");
+        $('.page').css({'display':'none'});
+        $('#second-page').css({'display':'block'});
+    });
+    $('#third-logo').on("tap",function(){
+        $('#first-logo').removeClass("e-click-link").addClass("e-link");
+        $('#second-logo').removeClass("rg-click-link").addClass("rg-link");
+        $('#fourth-logo').removeClass("input-click-link").addClass("input-link");
+
+        $(this).removeClass("agtm-link").addClass("agtm-click-link");
+        $('.page').css({'display':'none'});
+        $('#third-page').css({'display':'block'});    
+    });
+
+    $('#fourth-logo').on("tap",function(){
+        $('#first-logo').removeClass("e-click-link").addClass("e-link");
+        $('#second-logo').removeClass("rg-click-link").addClass("rg-link");
+        $('#third-logo').removeClass("agtm-click-link").addClass("agtm-link");
+
+        $(this).removeClass("input-link").addClass("input-click-link");
+        $('.page').css({'display':'none'});
+        $('#fourth-page').css({'display':'block'});  
+    });
+  })
+</script>
+</body>
+</html>

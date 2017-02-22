@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SVG Editor</title>
+	<style>
+	#toolbox {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 250px;
+		border-right: 1px solid #ccc;
+	}
+	#toolbox h2 {
+		margin: 0;
+		padding: 0;
+		background: #eee;
+		font-size: 16px;
+		height: 24px;
+		line-height: 24px;
+		padding: 5px 10px;
+	}
+	#toolbox form {
+		padding: 10px;
+	}
+	#canvas {
+		position: absolute;
+		left: 260px;
+		top: 10px;
+		bottom: 10px;
+		right: 10px;
+		box-shadow: 2px 2px 10px rgba(0,0,0,.4);
+		border-radius: 5px;
+	}
+	label {
+		display: inline-block;
+		width: 80px;
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<div id="toolbox">
+		<h2>创建</h2>
+		<form action="" id="create-shape">
+			<button type="button">Rect</button>
+			<button type="button">Circle</button>
+			<button type="button">Ellipse</button>
+			<button type="button">Line</button>
+		</form>
+		<h2>形状</h2>
+		<form action="" id="shape-attrs">
+			请先创建图形
+		</form>
+		<h2>外观和变换</h2>
+		<form id="look-and-transform" disabled="disabled">
+			<p>
+				<label style="display: inline;">填充</label>
+				<input id="fill" type="color" value="#ffffff"/>
+			</p>
+			<p>
+				<label style="display: inline;">描边</label>
+				<input id="stroke" type="color" value="#ff0000">
+				<input type="range" id="strokeWidth" value="1">
+			</p>
+			<p>
+				<label>translateX</label>
+				<input id="translateX" type="range" min="-400" max="400" value="0">
+				<label>translateY</label>
+				<input id="translateY" type="range" min="-400" max="400" value="0">
+				<label>rotate</label>
+				<input type="range" id="rotate" min="-180" max="180" value="0">
+				<label>scale</label>
+				<input type="scale" id="rotate" min="-1" max="2" step="0.01" value="1">
+			</p>
+		</form>
+	</div>
+	<div id="canvas">
+		 
+	</div>
+</body>
+<script>
+	 
+</script>
+</html>

@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+body, html, .page {
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica;
+  }
+.up_box_first, .up_box_second {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+  }
+.down_box_first, .down_box_second {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10% 5%;
+  }
+.down_box_first div,.down_box_second div{
+    width: 50%;
+    height: 50%;
+  }
+.down_box_first,.down_box_second, .down_box_first div,.down_box_second div {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    }
+span, input {
+    justify-content: center;
+    align-items: center;
+ }
+.circle, .circle_input {
+    width: 10.25em;
+    height: 10.25em;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border: 0.15em solid #4a90e2;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #4a90e2;
+    text-align:center;
+  }
+.circle_bg {
+    background-color: #4a90e2;
+    color: #fff;
+  }
+.input_text {
+
+    font-size:1em;
+}
+.p_click {
+    font-size: 2em;
+    color: #fff;
+    margin: 0;
+  }
+.btn_click {
+    background-color: #4a90e2;
+    color: #fff;
+  }
+p {
+    font-size: 2em;
+    color: #4a90e2;
+    margin: 0;
+  }
+h1{
+    font-size: 2.5em;
+  }
+h2{
+    font-size: 2em;
+  }
+*::-webkit-input-placeholder {
+    color: #4a90e2;;
+  }
+
+*:-moz-placeholder {
+    color: #4a90e2;
+  }
+
+*:-ms-input-placeholder {
+    color: #4a90e2;
+  }
+.footer_box_first,.footer_box_second {
+      width: 100%;
+      height: 15%;
+      padding-top: 5%;
+      display: flex;
+      display: -webkit-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+.footer_box_first button,.footer_box_second button{
+    height: 1.5em;
+    width: 4em;
+    border-radius: 30px;
+    border: 0.1em solid #4a90e2;
+    font-size: 2em;
+  }
+.btn_first {
+    background-color: #fff;
+    color:#4a90e2;
+  }
+
+.up_box_third {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+.down_box_third {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+  }
+.down_box_third div {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /*align-content: center;*/
+    background-color: #4a90e2;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+  }
+.two {
+    transform:rotate(90deg);
+      -ms-transform:rotate(90deg); /* IE 9 */
+      -webkit-transform:rotate(90deg); /* Safari and Chrome */
+  }
+.three {
+    transform:rotate(180deg);
+      -ms-transform:rotate(180deg); /* IE 9 */
+      -webkit-transform:rotate(180deg); /* Safari and Chrome */
+  }
+.four {
+    transform:rotate(270deg);
+      -ms-transform:rotate(270deg); /* IE 9 */
+      -webkit-transform:rotate(270deg); /* Safari and Chrome */
+  }
+.clickbtn {
+    color: #fff;
+    background-color: #4a90e2;
+  }
+button:hover {
+    color: #fff;
+    background-color: #4a90e2;
+  }
+a:hover, a:active {
+  text-decoration: none;
+  color: #000;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+body {
+  /*margin-top: 50px;*/
+  /*min-width: 1330px;*/
+}
+.my-sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  border-right: 1px solid #eee;
+  padding: 0;
+}
+.my-sidebar>.panel {
+  border-bottom: none;
+  margin-bottom: 0;
+  height: 100%;
+}
+.my-sidebar>ul {
+  margin: 20px -16px 20px -15px;
+}
+.my-sidebar>ul>li>a:active, .my-sidebar>ul>li>a:hover {
+  color: #333;
+}
+.nomp {
+  margin: 0;
+  padding: 0;
+}
+
+/*背景灰色*/
+.bgccc {
+  background-color: #ccc;
+  border: 1px solid #666;
+}
+
+/***************左边栏******************/
+.userData {
+  background-color: #bdbdbd;
+}
+.userTel label {
+}
+.userTel input {
+  display: inline-block;
+  width: 60%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+.userTel input:focus {
+  outline: none;
+  border-bottom: 1px solid #B5FCEE;
+}
+.user>li {
+  margin-top: 10px;
+}
+.user>li>span {
+  padding-left: 10px;
+}
+.user>li>ul {
+  margin-bottom: 10px;
+}
+.user>li>ul>li {
+  line-height: 24px;
+  height: 26px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  width: 70%;
+  font-size: 12px;
+  margin: 10px auto;
+}
+.user>li>ul>li>span {
+  padding-left: 0;
+  padding-right: 0;
+}
+.user>li>ul>li>input {
+  width: 50%;
+  height: 22px;
+  border: none;
+  margin-left: 10px;
+}
+.user>li>ul>li>input:focus {
+  outline: none;
+  text-decoration: underline;
+}
+.save {
+  width: 150px;
+}
+.over {
+  width: 150px;
+}
+.nopadding {
+  padding: 0;
+  margin: 0;
+}
+
+/******************右边栏**********************/
+.div-1, .div-2, .div-3 {
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 0;
+}
+.div-1 .panel-body, .div-2 .panel-body {
+  height: 420px;
+  overflow: hidden;
+}
+.panel-body, .panel-footer {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+}
+.panel-footer {
+  margin-top: 10px;
+}
+
+/****************验光宝******************/
+
+/*E部分*/
+.Etop {
+  background-color: #eee;
+  height: 150px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+/*.Etop h1 { margin: 0; }*/
+.Edown {
+  padding: 20px 20px;
+}
+.Edown>div {
+  margin-top: 10px;
+}
+.add {
+}
+.middle {
+}
+.middle span {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: inline-block;
+  width: 30px;
+}
+.middle img {
+  vertical-align: middle;
+  height: 80px;
+  width: 80px;
+}
+.jian {
+}
+.div-1-footer {
+  margin-bottom: 0px;
+  padding-bottom: 0;
+  margin-left: 0;
+}
+.div-1-footer li {
+  display: inline-block;
+  width: 33.33333%;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  height: 40px;
+}
+.div-1-footer li:last-child {
+  border-right: none;
+}
+.div-1-footer li button {
+  height: 100%;
+  width: 100%;
+}
+.div-2-footer li {
+  width: 50%;
+}
+
+/*散光图部分*/
+.SGtop {
+  border-bottom: 2px solid #ccc;
+  height: 150px;
+  padding: 20px;
+}
+.SGtop_left {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/image_astigmatism.png);
+}
+.SGtop_left_change {
+  background-image: url(../img/image_astigmatism_degree.png);
+}
+.SGmiddle {
+}
+.SGmiddle div {
+  margin: 10px auto;
+  width: 80%;
+  position: relative;
+}
+.SGmiddle .SGsub {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+}
+.SGmiddle .SGadd {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+}
+.SGmiddle b {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0 auto;
+}
+.SGdown {
+  height: 55px;
+  width: 80%;
+  margin: 30px auto;
+}
+.SGdown p {
+  margin-top: 20px;
+}
+
+/*************************牛眼**************************/
+.div-2 {
+  width: 350px;
+}
+.NYtop {
+  background-color: #eee;
+  height: 150px;
+  padding: 10px;
+}
+.NYtop p {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.NYmiddle .btn-group {
+  margin-top: 10px;
+}
+.NYmiddle .btn-group .btn {
+  margin-left: 5px !important;
+  width: 52px;
+}
+.jinshi_sub25, .jinshi_add25 {
+  border: none;
+  width: 60px;
+  font-weight: 700;
+  font-size: 30px;
+}
+.jinshi {
+  width: 100px;
+  font-size: 30px;
+}
+#right_eye {
+}
+#left_eye {
+  display: none;
+}
+.jinshidanmu {
+  display: none;
+  z-index: 11;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.jinshichoose {
+  margin: 100px auto 0;
+  width: 435px;
+  padding: 20px;
+  background-color: #fff;
+}
+.choose_wrap input {
+  width: 80px;
+  margin: 5px 15px 0 0;
+}
+
+/******************video部分*******************/
+.div-3 .panel-body {
+  height: auto;
+}
+video {
+  width: 100%, height:auto;
+}
+.changeWrap {
+  height: 2px;
+  width: 150px;
+  background-color: #333;
+  display: inline-block;
+  position: relative;
+}
+.changeinside {
+  height: 4px;
+  width: 50px;
+  background-color: #000;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -1px;
+}
+.changeinside:after {
+  content: "";
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  position: absolute;
+  right: -8px;
+  top: -6px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+/********************弹**幕**********************/
+.tanmu {
+  height: 150px;
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  animation: mymove .1s ease-out;
+}
+@keyframes mymove {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 50%;
+  }
+}
+.tanmuwrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .7);
+}
+.tanmuwrap .panel-body {
+  height: 50px;
+  min-height: 50px;
+}
+
+/**********************弹幕结束**********************/
+
+/*********************等待人列表***********************/
+.waiting {
+  cursor: pointer;
+  float: left;
+  height: 80px;
+  width: 60px;
+  margin: 5px 0 5px 10px;
+  text-align: center;
+}
+.waiting img {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  border-radius: 50%;
+}
+.currwaiting:first-child {
+  background: #ccc;
+}
+
+/*************休息一下弹幕***************/
+#restdanmu {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.rest_inside {
+  width: 435px;
+  padding: 40px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: -webkit-translate(-50%, -50%);
+  -ms-transform: -ms-translate(-50%, -50%);
+  -o-transform: -o-translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation: mymove .2s ease-out forwards;
+  -ms-animation: mymove .2s ease-out forwards;
+  -o-animation: mymove .2s ease-out forwards;
+  animation: mymove .2s ease-out forwards;
+}

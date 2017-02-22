@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+	<title>结束界面</title>
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	html {
+	    font-size : 20px;
+	    font-family:Helvetica;
+	}
+	@media only screen and (min-width: 350px){
+	    html {
+	        font-size: 23px !important;
+	    }
+	}
+	@media only screen and (min-width: 401px){
+	    html {
+	        font-size: 25px !important;
+	    }
+	}
+	@media only screen and (min-width: 428px){
+	    html {
+	        font-size: 26.75px !important;
+	    }
+	}
+	@media only screen and (min-width: 481px){
+	    html {
+	        font-size: 30px !important; 
+	    }
+	}
+	@media only screen and (min-width: 569px){
+	    html {
+	        font-size: 35px !important; 
+	    }
+	}
+	@media only screen and (min-width: 641px){
+		html{
+			font-size: 40px !important;
+		}
+	}
+	body, html{
+		height: 100%;
+		width: 100%;
+	}
+	.center_part {
+		width: 100%;
+		text-align: center;
+	}
+	.circle_result {
+		width: 7.65rem;
+		height: 7.65rem;
+		border-radius: 50%;
+		position: absolute;
+		top: 1.92rem;
+		background-color: #4a90e2;
+		color: #fff;
+		display: flex;
+		flex-wrap: wrap;
+	} 
+	/*.row {
+		flex-basis: 100%;
+		display: flex;
+		justify-content: center;
+	}*/
+	
+	/*.row:nth-child(1) {
+		box-sizing: border-box;
+		padding-top: 1.69rem;
+	}	*/
+	.title {
+		font-size: 0.71rem;
+	}
+	.vision_num {
+		font-size: 2.54rem;
+	}
+	.tips{
+		font-size: 0.44rem;
+		color: #9fcbff;
+	}
+</style>
+<body>
+	<div class="center_part">
+		<div class="circle_result">
+			<div class="row">
+				<p class="title">矫正视力</p>
+			</div>
+			<div class="row">
+				<p class="vision_num">0.7</p>
+			</div>
+			<div class="row">
+				<p class="tips">结果仅供参考</p>
+			</div>			
+		</div>
+	</div>
+	<!-- <div class="result.msg">
+		<p>您所配戴的眼镜度数偏低</p><br>
+		<p>建议更换眼镜</p>
+		<div class="notes">
+			<p>注： 眼镜清晰度不够，达不到标准视力将影响眼睛的调节容易产生疲惫感。</p>
+		</div>	
+	</div>
+	<a class="hospital_link">前往附近医院验光</a>
+	<a class="yjx_link">预约眼镜侠上门验光</a> -->
+</body>
+</html>

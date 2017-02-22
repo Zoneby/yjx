@@ -1,0 +1,16 @@
+.handpick-part-first-row > img {
+	width: 60%;
+	float: left;
+}
+.second-row-leftpart > img, .second-row-rightpart>img {
+	width: 4.5rem;
+}
+.series-content > div > img {
+	display: block;
+	width: 4.6rem;
+	height: 4.6rem;
+	text-align: center;
+}
+.feature-mirror-content > img, .topic-content > img {
+	width: 8rem;
+}

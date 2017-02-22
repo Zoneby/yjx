@@ -1,0 +1,350 @@
+<include file="header" />
+	<!-- 内部样式 -->
+	<script type="text/javascript" src="./jquery-2.2.2.min.js"></script>
+	<style type="text/css">
+			body{
+				font-family: "Microsoft YaHei" ! important;
+			}
+			.container{
+				max-width:768px; /* div的最大宽度为1200px */
+				margin-bottom: 2.5em;
+			}
+			.img-responsive{
+				margin-right: auto;
+				margin-left: auto;
+			}
+			hr {
+	     		margin-top: 0px; 
+	     		margin-bottom: 0px; 
+	   			border: 0;
+	   			border-top: 1px solid #eee;
+			}
+			.img_hr{
+				margin: 0 -15px 0 -15px;
+			}
+			.text_div{
+
+				margin-right: auto;
+			}
+			
+			.yellow_bar{
+			    float: left;
+			    width:4px;
+			    height:22px;
+			    background-color:#ef9236;
+			}
+			.text_div_p{
+				margin-left: 1em;
+				font-size: 1.23em;
+				color: #2f2f2f;
+				/*font-family: */
+				/*font-weight: bold;*/
+			}
+			p{
+				display: block;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				margin: 1em 0 1em 0;
+				font-size: 0.95em;
+			}
+			.click_div{
+				text-align: center;
+				padding-bottom: 4em;
+			}
+			.click_p{
+				margin: 0;
+			}
+			.radio_input{
+				display: block;
+				-webkit-margin-before: 0.8em;
+				-webkit-margin-after: 0.8em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				margin: 0.8em 0 0.8em 0;
+				padding: 1em;
+				border:1px solid #e4e4e4;
+				border-radius:3px;
+				color: #919191;
+
+			}
+			.important{
+				border:1px solid #ef9236;
+				border-radius:3px;
+				color: #ef9236;
+			}
+			.radio{
+				display: block;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				margin: 1em 0 1em 0;
+				font-size: 0.9em;
+			}
+			.buy_div{
+				display: block;
+				-webkit-margin-before: 0.8em;
+				/*-webkit-margin-after: 2em;*/
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				margin: 0.8em 0 0 0;
+				padding: 0.57em 0;
+				background-color:#eee;
+				z-index: 100;
+				position: fixed;
+				left: 0;
+				right:0;
+				bottom: 0;
+				margin-left:auto;
+				margin-right:auto;
+				width: 100%;
+				text-align: center;
+				max-width: 768px;
+			}
+			.col-1{
+			    width: 30%;
+			    float: left;
+			}
+			.col-2{
+			    width: 100%;
+			    float: left;
+			}
+
+			.buy_div_p{
+				margin: 5px 0 4.5px 5px;
+				font-size: 1.55em;
+				padding: 0.2em;
+				color: #000000;
+
+			}
+			.btn-warning{
+				width: 86%;
+				background-color: #ef9236;
+				/*color: #ef9236;*/
+				margin-left: 5px;
+				padding: 11px 20px;
+				font-size: 1.23em;
+			}
+			.btn-default{
+				float: right;
+				border-radius: 3px;
+				background-color: #eee;
+				font-size: 10px;
+				border: 1px solid #eee;
+				color: #919191;
+				padding: 0.2em 0.8em 0.2em 0.8em;
+			}
+			.btn:focus,
+			.btn:active:focus,
+			.btn.active:focus,
+			.btn.focus,
+			.btn:active.focus,
+			.btn.active.focus {
+			  outline: none;
+			  outline: none;
+			  outline-offset:0;
+			}
+			.btn-default:focus,
+			.btn-default:active:focus,
+			.btn-default.active:focus,
+			.btn-default.focus,
+			.btn-default:active.focus,
+			.btn-default.active.focus{
+				outline: none;
+			    outline: none;
+			    outline-offset:0;
+			    background-color: #fff;
+			    color: #919191;
+			}
+			a {
+			    color: #828282; 
+			    text-decoration: none;
+			}
+			a:focus,
+			a:active:focus,
+			a.active:focus,
+			a.focus,
+			a:active.focus,
+			a.active.focus {
+				color: #828282; 
+			    text-decoration: none;
+			}
+			a:focus, a:hover {
+    			color: #828282;
+    			text-decoration: none;
+			}
+			.buy_div{
+				display: block;
+				-webkit-margin-before: 0;
+				-webkit-margin-after: 0;
+				-webkit-margin-start: 0;
+				-webkit-margin-end: 0;
+				margin:0;
+				padding: 0.57em 15px;
+				background-color:#eee;
+				z-index: 100;
+				position: fixed;
+				left: 0;
+				right:0;
+				bottom: 0;
+				margin-left:auto;
+				margin-right:auto;
+				width: 100%;
+				text-align: center;
+				max-width: 768px;
+			}
+		</style>
+</head>
+<body>
+	<div class="container">
+		<div class="img_div">
+			<img src="{:APPS_DOMAIN}{$glass['photo4']}" class="img-responsive">
+			<hr class="img_hr" />
+		</div>
+		<div class="text_div">
+			<div class="text_bar_right">
+				<div class="yellow_bar"></div>
+				<p class="text_div_p">{$glass["glassname"]}</p>
+			</div>
+		</div>
+		<!--选择有膜无膜-->
+<!--		<div class="click_div">
+			<php>$cDegree = count($extra_degree);</php>
+			<for start="0" end="$cDegree" step="2">
+				<if condition="($i eq 0) ">
+				<div class="radio_input important" id="id_{$i}" value="{$i}" onclick="mOver('id_{$i}','{$extra_degree[$i + 1]}')">
+					<p class="click_p" price="{$extra_degree[$i + 1]}">{$extra_degree[$i]} + ￥{$extra_degree[$i + 1]}</p>
+				</div>
+				<else/>
+				<div class="radio_input " id="id_{$i}" value="{$i}" onclick="mOver('id_{$i}','{$extra_degree[$i + 1]}')">
+					<p class="click_p" price="{$extra_degree[$i + 1]}">{$extra_degree[$i]} + ￥{$extra_degree[$i + 1]}</p>
+				</div>
+
+				</if>
+			</for>
+		</div>-->
+
+		<!-- <input id="hiddenId" type="hidden" value=""/> -->
+
+		<!--<form role="form" method="post" action="{:U('Presbyopic/input')}">
+			<input type="hidden" name="glassid" value="{$glass['glassid']}" />
+			<input type="hidden" id="degree" name="degree" value="0" />
+			<div class="buy_div row">
+				<div class="col-1">
+					<p class="buy_div_p">￥{$glass['price']}</p>
+				</div>
+				<div class="col-2">
+					<button type="submit" class="btn btn-warning">立即购买</button>
+				</div>
+			</div>
+		</form>-->
+		<!--选择度数-->
+		<form id="order">
+			<div class="click_div" id="selectId_1" name="degree"></div>
+		</form>
+
+
+		<div class="buy_div">
+			<div class="col-2">
+				<button id="sub" type="submit" class="btn btn-warning">确认</button>
+			</div>
+		</div>
+	</div>
+	
+	
+	<script>
+	/*
+	// 更改选中眼镜框的样式
+
+	function mOver(str1,str2){
+		var test = str1;
+		var price_first = parseFloat({$glass["price"]});
+		var price_second = str2;
+		var total = Number(price_first) + Number(price_second);
+		total = total.toFixed(2);
+		$(".buy_div_p").html("￥"+total);
+		$("*").removeClass("important")
+		$("#" + test + "").addClass("important");
+		$("#degree").val($("#" + test + "").attr("value"));
+	}
+	function checkChg(){
+		$("*").removeClass("important");
+		var degree = $("#degree").val();
+		$('#id_' + degree).addClass("important");
+		
+		var price_first = parseFloat({$glass["price"]});
+		var price_second = $('#id_' + degree + ' .click_p').attr("price");
+		var total = Number(price_first) + Number(price_second);
+		total = total.toFixed(2);
+		$(".buy_div_p").html("￥"+total);
+	}
+	window.onload = function() {
+		checkChg();
+	}*/
+
+/*
+	function check() {
+		var data1 = $("#selectId_1 radio.value :checked").val();
+		if (data1==""){
+			alert("请选择远视度数");
+			return false;
+		}
+		return true;
+	}*/
+
+	$('#sub').click(
+			function(){
+				/*if(!check()){
+				 return;
+				 }*/
+				var url1 = 'save/'+'id/'+{$glass['glassid']};
+				console.info(url1);
+				var msg = $('#order').serialize();
+				$.ajax({
+					url: url1,
+					data: msg,
+					type: 'POST',
+					datatype: 'JSON',
+					success: function(msg){
+						var msg = JSON.parse(msg);
+						if(msg['code'] == 200){
+							window.location.href = 'order/order_id/'+ msg['order_id'];
+						}else if(msg['code'] == 400){
+							alert(msg['errormsg']);
+						}
+					},
+					error: function(msg){
+						console.info(msg);
+					}
+				});
+			}
+	);
+	// 增加远视度数js函数
+	function selectListSPH(){
+		var i, p, j;
+		var el = $("#selectId_1").html();
+
+//		el += '<li value="" class="radio_input">远视度数</li>';
+		for(i=100,j=0;i <= 400;i+=50,j++){
+			p = +i/100;
+
+			el += '<div class="radio_input" id='+j+' onclick="chooseSPH('+j+')" value="'+ p.toFixed(2) +'">老花'+i+'度('+ p.toFixed(2) +')</div>"
+
+		}
+		$("#selectId_1").append(el);
+	}
+	window.onload=function(){
+		selectListSPH();
+		
+	}
+
+	function chooseSPH(id){
+		var id_num = id;
+		$("#id_num").addClass("important");
+	}
+	</script>
+
+</body>
+</html>

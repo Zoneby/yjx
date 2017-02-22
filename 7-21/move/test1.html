@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-sacale=1.0,minimum-scale=1.0,user-scalable=no"/>
+	<title>移动端再次尝试</title>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	html {
+	    font-size : 20px;
+	    font-family:Helvetica;
+	}
+	@media only screen and (min-width: 401px){
+	    html {
+	        font-size: 25px !important;
+	    }
+	}
+	@media only screen and (min-width: 428px){
+	    html {
+	        font-size: 26.75px !important;
+	    }
+	}
+	@media only screen and (min-width: 481px){
+	    html {
+	        font-size: 30px !important; 
+	    }
+	}
+	@media only screen and (min-width: 569px){
+	    html {
+	        font-size: 35px !important; 
+	    }
+	}
+	@media only screen and (min-width: 641px){
+		html{
+			font-size: 40px !important;
+		}
+	}
+	body,html{
+		height: 100%;
+		width: 100%;
+	}
+	.show{
+		display: block !important;
+	}
+	#num1,#num2,#num3{
+		text-align: center;
+		height: 100%;
+		width: 100%;
+		position: relative;
+		display: none;
+	}
+	/*#num1{
+		
+	}
+	#num2{
+		padding-top: 1.4em;
+	}*/
+	.title1a2{
+		font-size: 1rem;
+		padding-top: 2em;
+		text-align: center;
+	}
+	.wrapper{
+		width: 11.6rem;
+		height: 11.3em;
+		margin: 2.6rem auto 0;
+		display: flex;
+		align-content:space-between;
+		justify-content: space-between;
+		flex-flow: row wrap;
+		
+	}
+	#distances{
+		margin: 1.8rem auto 0;
+	}
+	.wrapper>div{
+		width: 4.9rem;
+		height: 4.9rem;
+		border-radius: 50%;
+		box-sizing: border-box;
+		border: 1px solid #4a90e2;
+		background: #fff;
+		text-align:center;
+		line-height: 4.7rem; 
+		font-size: 0.8rem;
+		color: #4a90e2;
+	}
+	.Active1,.Active2{
+		background: #4a90e2 !important;
+		color: #fff !important;
+	}
+	.Active1>.edit,.Active2>.edit{
+		background: #4a90e2;
+		color: #fff;
+	}
+	.edit{
+		border:none;
+		width: 4.5rem;
+		text-align: center;
+		background: #fff;
+		color: #4a90e2;
+		outline: medium;
+		font-size: 0.8rem;
+	}
+	.edit::-webkit-input-placeholder{
+		color: #4a90e2;
+	}
+
+
+	.button_size{
+		width: 50%;
+		height: 2.1rem;
+		border-radius: 1rem;
+		box-sizing: border-box;
+		border: 1px solid #4a90e2;
+		background: #4a90e2;
+		outline: medium;
+		color: #fff;
+		position: absolute;
+		bottom: 7%;
+		left:25%;
+		font-size: 1.1rem;
+		
+	}
+	.button_active{
+		transform:  0.5s all ease-in-out;
+		background: #fff !important;
+		color:  #4a90e2 !important;
+	}
+
+	#num2>p{
+		font-size: 0.78rem;
+		color: #8a8a8a;
+		margin-top: 1.1rem;
+	}
+	
+	#num3>.h2_wrapper{
+		height: 36%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#num3>.h2_wrapper>h2{
+		font-size: 1.1rem;
+	}
+	.change_wrap{
+		width: 13.5rem;
+		height: 1.6rem;
+		margin: 0 auto;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		padding-top: 1.3rem;
+	}
+	.changeD{
+		display: block;
+		width: 4.4rem;
+		height: 1.6rem;
+		line-height: 1.6rem;
+		border-radius: 1rem;
+		box-sizing:border-box;
+		border: 1px solid #4a90e2;
+		color: #4a90e2;
+		padding: 0 0.5rem;
+		font-size: 0.7rem;
+	}
+	.changeS{
+		display: block;
+		width: 6.4rem;
+		height: 1.6rem;
+		line-height: 1.6rem;
+		border-radius: 1rem;
+		box-sizing:border-box;
+		border: 1px solid #4a90e2;
+		color: #4a90e2;
+		padding: 0 0.5rem;
+		font-size: 0.7rem;
+	}
+	.change_active{
+		color: #fff;
+		background: #4a90e2;
+	}
+
+
+
+	/*弹出层样式*/
+	.pop_wrap{
+		width: 13.3rem;
+		height: 12rem;
+		z-index: 501;
+		margin: 0 auto;
+		position: relative;
+	}
+	#pop1,#pop2{
+		position: absolute;
+		top: 3rem;
+		left: 0;
+		width: 13.3rem;
+		height: 12rem;
+		border-radius: 0.3rem;
+		margin: 0 auto;
+		background: #fff;
+		display: none;
+		z-index: 501;
+		display: none;
+		text-align:center;
+	}
+	.pop_wrap>div>h3{
+		font-size: 0.9rem;
+		margin: 1.9rem 0 0.5rem;
+
+	}
+	.pop_wrap>div>p{
+		font-size: 0.6rem;
+		color: #a3a3a3;
+		margin-bottom: 1.5rem;
+	}
+	.pop_wrap>div>input{
+		outline: medium;
+		border: 2px solid #4a90e2;
+		width: 9.8rem;
+		height:2.1rem;
+		box-sizing: border-box;
+		line-height: 2.1rem; 
+		border-radius: 0.3rem;
+		text-align: center;
+		font-size: 0.7rem;
+		color: #4a90e2;
+	}
+	.pop_wrap>div>button{
+		display: block;
+		margin: 1.5rem 2.5rem 0 2.5rem;
+		width: 8.25rem;
+		height: 1.7rem;
+		border-radius: 0.7rem;
+		line-height: 1.7rem;
+		border: none;
+		outline: medium;
+		color: #fff;
+		background: #4a90e2;
+		font-size: 0.6rem;
+	}
+	.e_wrapper{
+		height: 50%;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		display:flex;
+		flex-flow: row wrap;
+	}
+	.e_wrapper>div{
+		display: flex;
+		width: 50%;
+		height: 50%;
+		background: #4a90e2;
+		border: 1px solid #9ec3ef;
+		box-sizing: border-box;
+		justify-content: center;
+		align-items: center;
+	}
+	.e_wrapper>div>img{
+		height: 20%;
+	}
+	.e_wrapper>div:nth-child(1)>img{
+		transform:rotate(270deg);
+	}
+	.e_wrapper>div:nth-child(2)>img{
+		transform:rotate(90deg);
+	}
+	.e_wrapper>div:nth-child(4)>img{
+		transform:rotate(180deg);
+	}
+</style>
+</head>
+<body>
+	<div id="num1" class="show">
+		<h2 class="title1a2">请选择屏幕尺寸</h2>
+		<div class="wrapper" id="size">
+			<div>14英寸</div>
+			<div>15.6英寸</div>
+			<div>23英寸</div>
+			<div><input class="edit" type="text" name="" placeholder="手动编辑"></div>
+		</div>
+		<button class="button_size btn1" >下一步</button>
+	</div>
+	<div id="num2">
+		<h2 class="title1a2">请选择一个合适的测量距离</h2>
+		<p>(人眼与电脑屏幕的距离)</p>
+		<div class="wrapper" id="distances">
+			<div>2米</div>
+			<div>3米</div>
+			<div>4米</div>
+			<div><input class="edit" type="text" name="" placeholder="手动编辑"></div>
+		</div>
+		<button class="button_size btn2">下一步</button>
+	</div>
+	<div id="num3">
+		<div class="change_wrap">
+			<p class="changeD">修改距离</p>
+			<p class="changeS">修改屏幕尺寸</p>
+		</div>
+		<div class="pop_wrap">
+			<div id="pop1">
+			<h3>选择合适的测量距离</h3>
+			<p>(人眼与电脑屏幕的距离/米)</p>
+			<input type="text" class="distance_input">
+			<button class="deleteDiv1">确定</button>
+		</div>
+		<div id="pop2">
+			<h3>选择当前电脑屏幕的尺寸</h3>
+			<p>(电脑屏幕对角线长度/英寸)</p>
+			<input type="text" class="size_input">
+			<button class="deleteDiv2">确定</button>
+			</div> 
+		
+		</div>
+		
+		<div class="h2_wrapper"><h2>点击屏幕的E字开口方向</h2></div>
+		<div class="e_wrapper">
+			<div><img src="E-right.png"></div>
+			<div><img src="E-right.png"></div>
+			<div><img src="E-right.png"></div>
+			<div><img src="E-right.png"></div>
+		</div>
+	</div>
+<script type="text/javascript" src="zepto.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//页面切换
+		$('.btn1').on("tap",function(){
+			$(this).addClass('button_active');
+			$('#num1').removeClass('show');
+			$('#num2').addClass('show');
+			
+		});
+		$('.btn2').on("tap",function(){
+			$('#num2').removeClass('show');
+			$('#num3').addClass('show');
+			$(this).addClass('button_active');
+		});
+		//按钮点击的样式改变，选中之后 Active1与Active2 的innerHTML 分别为用户选中的值
+		$('#size div').on("tap",function(){
+			$('#size div').removeClass('Active1');
+			$(this).addClass('Active1');
+		});
+		$('#distances div').on("tap",function(){
+			$('#distances div').removeClass('Active2');
+			$(this).addClass('Active2');
+		});
+
+		//修改距离尺寸弹出层
+		$('.changeD').on("tap",function(){
+			//先改变样式
+			$('.changeS').removeClass('change_active');
+			$(this).addClass('change_active');
+			
+			createDiv();
+			
+			//弹出div
+			$('#pop1').css({'display':'block'});
+
+
+			$('.deleteDiv1').on('tap',function(){
+				$('#pop1').css({'display':'none'});
+				$('#bgd').remove();
+			});
+		});
+
+
+
+		$('.changeS').on("tap",function(){
+			//先改变样式
+			$('.changeD').removeClass('change_active');
+			$(this).addClass('change_active');
+			
+			createDiv();
+			//弹出div
+			$('#pop2').css({'display':'block'});
+
+			$('.deleteDiv2').on('tap',function(){
+				$('#pop2').css({'display':'none'});
+				$('#bgd').remove();
+			});
+		});
+
+
+		//创建一个div笼罩层，使页面变灰，并不可点击
+		function createDiv(){
+			var text = $("<div></div>").css({
+				'background':'#000',
+				'width':'100%',
+				'height':'100%',
+				'position':'fixed',
+				'left':0,
+				'top':0,
+				'z-index':500,
+				'opacity':0.5,
+
+			}).attr('id','bgd');
+			$('body').append(text);
+		}
+	})
+</script>
+</body>
+</html>

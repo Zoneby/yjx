@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="yes" name="apple-moblie-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telphone=no,email=no" name="format-detection">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+	<title>上传验光单</title>
+	<script type="text/javascript" src="./flexible.js"></script>
+</head>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-family: "Microsoft YaHei" ! important;
+	}
+	.index-logo{
+		margin-top: 0.74rem;
+		margin-left: 0.37rem;
+		width: 2.3rem;
+	}
+	.now-state {
+		font-size: 22px;
+		margin-top: 1.6rem;
+		width: 100%;
+		text-align: center;
+	}
+	.index-bg {
+		width: 100%;
+	}
+	.btn-div {
+		width: 100%;
+		text-align: center;
+		
+	}
+	.btn-div a {
+
+		display: block;
+		
+	}
+	.upload-link {
+		margin: 0 auto;
+		width: 5.28rem;
+		height: 1.11rem;
+		line-height: 1.11rem;
+		background-color: #facf0e;
+		color: #fff;
+		font-size: 15px;
+		border-radius: 1rem;
+		border : 1px solid #facf0e;
+	}
+	.example-link {
+		margin-top: 0.7rem;
+		font-size: 16px;
+		color: #158a9c;
+	}
+	.about {
+		margin-top: 1.45rem;
+		margin-left: 0.37rem;
+	}
+	.title:before {
+		position: relative;
+		top: 0.08rem;
+		content: "";
+		width: 0;
+		height: 0;
+		display: inline-block;
+		border-style: solid;
+		border-width: 0.3rem 0.2rem 0.1rem;
+		border-color: #facf0e transparent transparent transparent;
+		z-index: 999;
+	}
+	.title{
+		font-size: 20px;
+		line-height: 1.5rem;
+	}
+	.about-msg {
+		font-size: 16px;
+		color: #b6b6b6;
+	}
+</style>
+<body>
+	<img src="./logo.png" alt="yjx-logo" class="index-logo">
+	<p class="now-state">
+		您目前还没有验光单
+	</p>
+	<img src="./1.png" alt="" class="index-bg">
+	<div class="btn-div"> 
+		<a class="upload-link">点击上传</a>
+		<a class="example-link">查看验光单示例</a>
+	</div>
+	<div class="about">
+		<p class="title">
+		关于验光单
+		</p>
+		<p class="about-msg"> 1.上传验光单后，由客服审核并录入<br>
+		2.录入后，您可以在购镜时查询和使用验光数据</p>
+	</div>
+	
+</body>
+</html>

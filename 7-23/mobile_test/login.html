@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="yes" name="apple-moblie-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telphone=no,email=no" name="format-detection">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+	<title>扫描登录</title>
+	<script type="text/javascript" src="./lib/flexible.js"></script>
+</head>
+<style type="text/css">
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	html{
+		font-family:Helvetica;
+	}
+	a {
+		text-decoration: none;
+	}
+	.login-bg {
+		width: 6.7rem;
+		height: 8.43rem;
+		position: absolute;
+		top: 1.96rem;
+		left: 1.8rem;
+	}
+	.login-link {
+		width: 4.44rem;
+		height: 1.05rem;
+		position: absolute;
+		top: 13.2rem;
+		left: 2.78rem;
+		color: #fff;
+		background-color: #4a90e2;
+		border-radius: 1rem;
+		text-align: center;
+		line-height: 1.05rem;
+		font-size: 21px;
+	}
+	[data-dpr="2"] .login-link{
+		font-size: 42px;
+	}
+	[data-dpr="3"] .login-link{
+		font-size: 63px;
+	}
+	.before {
+				width: 0;
+				height: 0;
+				border: 1em solid #facf0e;
+				border-color: transparent transparent transparent #facf0e;
+			}
+			.after {
+				width: 0;
+				height: 0;
+				border: 1em solid #facf0e;
+				border-color: transparent  #facf0e transparent transparent;
+			}
+			.title-p:before {
+				content:"";
+				width: 0;
+				height: 0;
+				border: 1em solid #facf0e;
+				border-color: transparent transparent transparent #facf0e;
+			}
+			.title-p:after {
+				content:"";
+				width: 0;
+				height: 0;
+				border: 1em solid #facf0e;
+				border-color: transparent  #facf0e transparent transparent;
+			}
+		.title-p{
+				font-size: 1.6em;
+				line-height: 2em;
+				color: #000;
+			}
+</style>
+
+<body>
+<img src="./images/Group.png" class="login-bg">
+<a href="#" class="login-link">扫描登录</a>
+<p class="before"></p>
+<p class="title-p">title</p>
+<p class="after"></p>
+</body>
+</html>
